@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react'
 import { motion } from 'framer-motion';
-
+import ExperienceCard from '../components/ExperienceCard';
 
 interface Props {
     
@@ -18,8 +18,8 @@ export default function WorkExperience({}: Props): ReactElement {
         <h3 className="absolute top-24 text-gray-500 uppercase tracking-[20px] text-2xl">
           Experience
         </h3>
-            <div>
-                <ExperienceCard />
+        <div className="mt-20">
+          <ExperienceCard />
         </div>
       </motion.div>
     );
