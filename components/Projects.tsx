@@ -17,26 +17,26 @@ export default function Projects({ }: Props): ReactElement {
             justify-evenly mx-auto items-center z-0"
       >
         <h3 className="absolute top-24 text-gray-500 uppercase tracking-[20px] text-2xl">
-          Projects
+          &#60;Projects/&#62;
         </h3>
         <div
           className="relative w-full flex overflow-x-scroll overflow-y-hidden 
-                snap-x snap-mandatory z-20"
+                snap-x snap-mandatory z-20 scrollbar-thin scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80"
         >
           {projects.map((project, i) => {
             return (
               <div
                 className="w-screen flex-shrink-0 snap-center flex flex-col 
-                    space-y-5 items-center justify-center p-20 md:p-44 h-screen"
+                    space-y-5 items-center justify-center p-20 md:p-44 h-screen "
               >
-                    <motion.img
-                        initial={{
-                            opacity: 0,
-                            y:-300
-                        }}
-                        transition={{ duration: 1.2 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{once:true}}
+                <motion.img
+                  initial={{
+                    opacity: 0,
+                    y: -300,
+                  }}
+                  transition={{ duration: 1.2 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
                   src="https://media.tenor.com/flflC6GFzO8AAAAM/sultan-alrefaei-programmer.gif"
                   alt="project"
                 />

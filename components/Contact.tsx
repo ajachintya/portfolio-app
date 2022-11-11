@@ -27,7 +27,7 @@ const Contact = () => {
       max-w-7xl px-10 justify-evenly mx-auto items-center"
     >
       <h3 className="absolute top-24 text-gray-500 uppercase tracking-[20px] text-2xl">
-        Contact
+        &#60;Contact/&#62;
       </h3>
 
       <div className="flex flex-col space-y-10 w-fit">

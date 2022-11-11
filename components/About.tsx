@@ -16,7 +16,7 @@ export default function About({}: Props): ReactElement {
          justify-evenly mx-auto items-center"
       >
         <h3 className="absolute top-24 text-gray-500 uppercase tracking-[20px] text-2xl">
-          About
+          &#60;About/&#62;
         </h3>
         <motion.img
           initial={{
@@ -56,9 +56,7 @@ export default function About({}: Props): ReactElement {
             target="_blank"
             href="https://drive.google.com/file/d/11M0TYwywEwT2gZ6ilALWTCNJVSP5WdjI/view?usp=sharing"
           >
-            <button className="heroButton mt-10">
-              Download CV
-            </button>
+            <button className="heroButton mt-10">Download CV</button>
           </a>
         </div>
       </motion.div>

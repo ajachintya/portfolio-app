@@ -14,7 +14,7 @@ export default function Skills({}: Props): ReactElement {
       min-h-screen justify-center xl:space-y-0 mx-auto items-center"
     >
       <h3 className="absolute top-24 text-gray-500 uppercase tracking-[20px] text-2xl">
-        Skills
+        &#60;Skills/&#62;
       </h3>
       <p className="text-gray-500 uppercase tracking-[10px] text-xs">
         Languages

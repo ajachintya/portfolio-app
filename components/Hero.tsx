@@ -21,7 +21,7 @@ export default function Hero() {
         />
         <div className="z-20">
           <h2 className="text-xs uppercase text-gray-500 pb-2 tracking-[15px]">
-            Software Engineer
+            &#60;Software Engineer/&#62;
           </h2>
           <h1 className="text-4xl lg:text-5xl font-semibold px-10">
             <span className="mr-3">{text}</span>
