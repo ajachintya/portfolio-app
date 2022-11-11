@@ -9,7 +9,8 @@ import Contact from '../components/Contact';
 
 export default function Home() {
   return (
-    <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-scroll z-0 overflow-x-hidden">
+    <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll z-0
+     overflow-x-hidden scrollbar scroll-bar-track-gray-400/20 scrollbar-thumb-[#]">
       <Head>
         <title>Create Next App</title>
       </Head>
