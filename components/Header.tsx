@@ -22,18 +22,32 @@ function Header() {
         className="flex flex-row items-center"
       >
         {/* Social icon */}
-              <SocialIcon
-          url="https://twitter.com/jaketrent"
+        <SocialIcon
+          className="heroButton"
+          style={{ height: 40, width: 40 }}
+          url="https://www.linkedin.com/in/achintya-jaiswal-44276818b/"
+          fgColor="gray"
+                  bgColor="transparent"
+                  target="_blank"
+        />
+        <SocialIcon
+          className="heroButton"
+          style={{ height: 40, width: 40 }}
+          url="https://github.com/ajachintya"
           fgColor="gray"
           bgColor="transparent"
         />
         <SocialIcon
-          url="https://twitter.com/jaketrent"
+          className="heroButton"
+          style={{ height: 40, width: 40 }}
+          url="https://leetcode.com/ajachintyajaiswal/"
           fgColor="gray"
           bgColor="transparent"
         />
         <SocialIcon
-          url="https://twitter.com/jaketrent"
+          className="heroButton"
+            style={{ height: 40, width: 40 }}
+          url="https://www.hackerrank.com/aj_achintya?hr_r=1"
           fgColor="gray"
           bgColor="transparent"
         />
@@ -55,6 +69,7 @@ function Header() {
         className="flex flex-row items-center text-gray-300 cursor-pointer"
       >
         <SocialIcon
+          style={{ height: 40, width: 40 }}
           className="cursor-pointer"
           network="email"
           fgColor="gray"
