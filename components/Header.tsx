@@ -2,8 +2,13 @@ import React from "react";
 import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
 import Link from 'next/link'
+import { Social } from '../typings'
 
-function Header() {
+type Props = {
+  socials: Social[];
+}
+
+function Header({ socials }:Props) {
   return (
     <header className="sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center">
       <motion.div
@@ -23,35 +28,19 @@ function Header() {
         className="flex flex-row items-center"
       >
         {/* Social icon */}
-        <SocialIcon
-          className="heroButton"
-          style={{ height: 40, width: 40 }}
-          url="https://www.linkedin.com/in/achintya-jaiswal-44276818b/"
-          fgColor="gray"
-          bgColor="transparent"
-          target="_blank"
-        />
-        <SocialIcon
-          className="heroButton"
-          style={{ height: 40, width: 40 }}
-          url="https://github.com/ajachintya"
-          fgColor="gray"
-          bgColor="transparent"
-        />
-        <SocialIcon
-          className="heroButton"
-          style={{ height: 40, width: 40 }}
-          url="https://leetcode.com/ajachintyajaiswal/"
-          fgColor="gray"
-          bgColor="transparent"
-        />
-        <SocialIcon
-          className="heroButton"
-          style={{ height: 40, width: 40 }}
-          url="https://www.hackerrank.com/aj_achintya?hr_r=1"
-          fgColor="gray"
-          bgColor="transparent"
-        />
+        {socials?.map((social,index) => {
+          return (
+            <SocialIcon
+              key={index}
+              className="heroButton"
+              style={{ height: 40, width: 40 }}
+              url={social?.url}
+              fgColor="gray"
+              bgColor="transparent"
+              target="_blank"
+            />
+          );
+        })}
       </motion.div>
       <motion.div
         initial={{

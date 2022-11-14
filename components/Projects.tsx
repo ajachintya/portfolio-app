@@ -1,12 +1,13 @@
 import React, { ReactElement } from 'react'
 import {motion} from 'framer-motion'
+import { Project } from '../typings';
+import { urlFor } from '../sanity';
 
-interface Props {
-    
+type Props = {
+    projects:Project[]
 }
 
-export default function Projects({ }: Props): ReactElement {
-    const projects = [1, 2, 3, 4, 5];
+export default function Projects({ projects }: Props): ReactElement {
     return (
       <motion.div
         initial={{ opacity: 0 }}
@@ -38,23 +39,28 @@ export default function Projects({ }: Props): ReactElement {
                   transition={{ duration: 1.2 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  src="https://media.tenor.com/flflC6GFzO8AAAAM/sultan-alrefaei-programmer.gif"
+                  className="w-44 h-38"
+                  src={urlFor(project?.image.asset?._ref).url()}
                   alt="project"
                 />
                 <div className="space-y-10 px-0 md:px-10 max-w-6xl">
                   <h4 className="text-2xl font-semibold text-center">
                     {" "}
-                    {i + 1}. Project Heading
+                    {i + 1}. {project?.title}
                   </h4>
+                  <div className="flex items-center space-x-2 justify-center ">
+                    {project?.technologies?.map((technology:any, index:number) => {
+                      return (
+                        <img
+                          className="w-10 h-10 rounded-full"
+                          key={index}
+                          src={urlFor(technology.image.asset._ref).url()}
+                        />
+                      );
+                    })}
+                  </div>
                   <p className="text-center md:text-left text-md">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum.
+                    {project?.summary}
                   </p>
                 </div>
               </div>

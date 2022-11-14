@@ -1,16 +1,19 @@
 import React, { ReactElement } from 'react'
 import {motion} from 'framer-motion'
+import { urlFor } from '../sanity';
+import { Skill } from '../typings';
 
 type Props = {
-    directionLeft?:boolean
+    directionLeft?: boolean,
+    skill:Skill
 }
 
-export default function Skill({ directionLeft }:Props): ReactElement {
+export default function SkillC({ directionLeft,skill }:Props): ReactElement {
     return (
         <div className="group relative flex cursor-pointer">
             <motion.img
                 initial={{
-                    x: directionLeft ? -200 : 200,
+                    x: directionLeft ? -110 : 110,
                     opacity:0
                 }}
                 transition={{ duration: 1 }}
@@ -18,7 +21,7 @@ export default function Skill({ directionLeft }:Props): ReactElement {
 
                 className="rounded-full border border-gray-500 object-cover w-24 h-16 xl:w-32 xl:h-11
                 filter group-hover:grayscale transition duration-300 ease-in-out"
-          src="https://w7.pngwing.com/pngs/79/518/png-transparent-js-react-js-logo-react-react-native-logos-icon-thumbnail.png"
+          src={urlFor(skill?.image).url()}
           alt=""
         />
       </div>

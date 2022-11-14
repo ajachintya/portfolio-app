@@ -30,8 +30,8 @@ const Contact = () => {
       </h3>
 
       <div className="flex flex-col space-y-10 w-fit">
-        <h4 className="text-2xl font-semibold text-center">
-          I have got just what you need.{" "}
+        <h4 className="text-md md:text-xl font-semibold text-center">
+          I have got just what you need. &nbsp;
           <span className=" decoration-[#F7AB0A]/50 underline">Lets Talk.</span>
         </h4>
         <div className="space-y-5">
@@ -41,11 +41,7 @@ const Contact = () => {
           </div>
           <div className="flex items-center space-x-5 justify-center">
             <EnvelopeIcon className="text-[#F7AB0A] h-5 w-5 animate-pulse" />
-            <p className="text-md">ajachintyajaiswal.team@gmail.com</p>
-          </div>
-          <div className="flex items-center space-x-5 justify-center">
-            <MapPinIcon className="text-[#F7AB0A] h-5 w-5 animate-pulse" />
-            <p className="text-md">123 Developer Lane</p>
+            <p className="text-md">ajachintyajaiswal@gmail.com</p>
           </div>
         </div>
 
@@ -57,14 +53,16 @@ const Contact = () => {
             <input
               {...register("name")}
               placeholder="Name"
-              className="contactInput"
+              className="contactInput w-[50%] md:w-fit"
               type="text"
+              required
             />
             <input
               {...register("email")}
               placeholder="Email"
-              className="contactInput"
+              className="contactInput w-[50%] md:w-fit"
               type="email"
+              required
             />
           </div>
           <input
@@ -72,15 +70,17 @@ const Contact = () => {
             placeholder="Subject"
             className="contactInput"
             type="text"
+            required
           />
           <textarea
             {...register("message")}
             placeholder="Message"
             className="contactInput"
+            required
           />
           <button
             type="submit"
-            className="bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold text-sm"
+            className="bg-[#F7AB0A] py-3 px-10 rounded-md text-black font-bold text-sm"
           >
             Submit
           </button>

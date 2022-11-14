@@ -1,10 +1,13 @@
 import React, { ReactElement } from "react";
-import Skill from "../components/Skill";
+import SkillC from "../components/Skill";
 import { motion } from "framer-motion";
+import { Skill } from "../typings";
 
-interface Props {}
+type Props = {
+  skills:Skill[]
+}
 
-export default function Skills({}: Props): ReactElement {
+export default function Skills({skills}: Props): ReactElement {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -16,21 +19,15 @@ export default function Skills({}: Props): ReactElement {
       <h3 className="absolute top-24 text-gray-500 uppercase tracking-[20px] text-2xl">
         &#60;Skills/&#62;
       </h3>
-      <p className="text-gray-500 uppercase tracking-[10px] text-xs">
-        Languages
-      </p>
-      <div className="pt-5 pb-5 grid grid-cols-4 gap-5">
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-      </div>
-      <p className="text-gray-500 uppercase tracking-[10px] text-xs">Tools</p>
       <div className="pt-5 grid grid-cols-4 gap-5">
-        <Skill directionLeft={true} />
-        <Skill directionLeft={true} />
+        {skills?.slice(0,skills.length/2).map((skill,index) => {
+          return <SkillC key={index} skill={skill} />;
+        })}
+      </div>
+      <div className="pt-5 grid grid-cols-4 gap-5">
+        {skills?.slice((skills.length/2),skills.length).map((skill,index) => {
+          return <SkillC key={index} directionLeft={true} skill={skill} />;
+        })}
       </div>
     </motion.div>
   );
