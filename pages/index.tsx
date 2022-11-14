@@ -29,7 +29,7 @@ export default function Home({pageInfo,experiences,skills,projects,socials}:Prop
      overflow-x-hidden scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 scrollbar-thin"
     >
       <Head>
-        <title>Achintya's Portfolio</title>
+        <title>Achintya Portfolio</title>
       </Head>
 
       <Header socials={socials} />
