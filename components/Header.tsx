@@ -38,6 +38,7 @@ function Header({ socials }:Props) {
               fgColor="gray"
               bgColor="transparent"
               target="_blank"
+              rel="noopener noreferrer"
             />
           );
         })}

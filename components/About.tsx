@@ -46,11 +46,10 @@ export default function About({ pageInfo }: Props): ReactElement {
           <span className="underline decoration-[#7FAB0A]/50">little</span>{" "}
           background
         </h4>
-        <p className="text-base">
-          {pageInfo?.backgroundInformation}
-        </p>
+        <p className="text-base">{pageInfo?.backgroundInformation}</p>
         <a
           target="_blank"
+          rel="noopener noreferrer"
           href="https://drive.google.com/file/d/11M0TYwywEwT2gZ6ilALWTCNJVSP5WdjI/view?usp=sharing"
         >
           <button className="heroButton mt-10">Download CV</button>

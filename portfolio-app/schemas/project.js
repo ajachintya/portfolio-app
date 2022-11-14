@@ -29,6 +29,18 @@ export default {
       of: [{ type: "reference", to: { type: "skill" } }],
     },
     {
+      name: "gitLink",
+      title: "GitLink",
+      type: "text",
+      of: [{ type: "reference", to: { type: "social" } }],
+    },
+    {
+      name: "liveLink",
+      title: "LiveLink",
+      type: "text",
+      of: [{ type: "reference", to: { type: "social" } }],
+    },
+    {
       name: "linkToBuild",
       title: "LinkToBuild",
       type: "url",

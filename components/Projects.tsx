@@ -43,21 +43,43 @@ export default function Projects({ projects }: Props): ReactElement {
                   src={urlFor(project?.image.asset?._ref).url()}
                   alt="project"
                 />
-                <div className="space-y-10 px-0 md:px-10 max-w-6xl">
+                <div className="space-y-5 px-0 md:px-10 max-w-6xl">
                   <h4 className="text-2xl font-semibold text-center">
                     {" "}
                     {i + 1}. {project?.title}
                   </h4>
                   <div className="flex items-center space-x-2 justify-center ">
-                    {project?.technologies?.map((technology:any, index:number) => {
-                      return (
-                        <img
-                          className="w-10 h-10 rounded-full"
-                          key={index}
-                          src={urlFor(technology.image.asset._ref).url()}
-                        />
-                      );
-                    })}
+                    {project?.technologies?.map(
+                      (technology: any, index: number) => {
+                        return (
+                          <img
+                            className="w-10 h-10 rounded-full"
+                            key={index}
+                            src={urlFor(technology.image.asset._ref).url()}
+                          />
+                        );
+                      }
+                    )}
+                  </div>
+                  <div className="flex items-center space-x-2 justify-center">
+                    {project.gitLink ? (
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href={project?.gitLink}
+                      >
+                        <button className="heroButton">Open Source 🔥</button>
+                      </a>
+                    ) : null}
+                    {project.liveLink ? (
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href={project?.liveLink}
+                      >
+                        <button className="heroButton">Live 📸</button>
+                      </a>
+                    ) : null}
                   </div>
                   <p className="text-center md:text-left text-md">
                     {project?.summary}
