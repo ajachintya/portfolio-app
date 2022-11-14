@@ -61,7 +61,7 @@ export default function Projects({ projects }: Props): ReactElement {
                       }
                     )}
                   </div>
-                  <div className="flex items-center space-x-2 justify-center">
+                  {/* <div className="flex items-center space-x-2 justify-center">
                     {project?.gitLink ? (
                       <a
                         target="_blank"
@@ -80,7 +80,7 @@ export default function Projects({ projects }: Props): ReactElement {
                         <button className="heroButton">Live 📸</button>
                       </a>
                     ) : null}
-                  </div>
+                  </div> */}
                   <p className="text-center md:text-left text-md">
                     {project?.summary}
                   </p>
