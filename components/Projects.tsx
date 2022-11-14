@@ -62,7 +62,7 @@ export default function Projects({ projects }: Props): ReactElement {
                     )}
                   </div>
                   <div className="flex items-center space-x-2 justify-center">
-                    {project.gitLink ? (
+                    {project?.gitLink ? (
                       <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -71,7 +71,7 @@ export default function Projects({ projects }: Props): ReactElement {
                         <button className="heroButton">Open Source 🔥</button>
                       </a>
                     ) : null}
-                    {project.liveLink ? (
+                    {project?.liveLink ? (
                       <a
                         target="_blank"
                         rel="noopener noreferrer"
