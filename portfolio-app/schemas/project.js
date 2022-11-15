@@ -31,14 +31,7 @@ export default {
     {
       name: "gitLink",
       title: "GitLink",
-      type: "text",
-      of: [{ type: "reference", to: { type: "social" } }],
-    },
-    {
-      name: "liveLink",
-      title: "LiveLink",
-      type: "text",
-      of: [{ type: "reference", to: { type: "social" } }],
+      type: "url",
     },
     {
       name: "linkToBuild",

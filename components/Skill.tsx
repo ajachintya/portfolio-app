@@ -19,7 +19,7 @@ export default function SkillC({ directionLeft,skill }:Props): ReactElement {
                 transition={{ duration: 1 }}
                 whileInView={{opacity:1,x:0}}
 
-                className="rounded-full border border-gray-500 object-cover w-24 h-16 xl:w-32 xl:h-11
+                className="rounded-full border border-gray-500 object-cover w-10 h-15
                 filter group-hover:grayscale transition duration-300 ease-in-out"
           src={urlFor(skill?.image).url()}
           alt=""

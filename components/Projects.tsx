@@ -17,7 +17,7 @@ export default function Projects({ projects }: Props): ReactElement {
             text-left md:flex-row max-w-full 
             justify-evenly mx-auto items-center z-0"
       >
-        <h3 className="absolute top-24 text-gray-500 uppercase tracking-[20px] text-2xl">
+        <h3 className="absolute top-24 text-gray-500 uppercase tracking-[20px] sm:text-sm md:text-lg lg:text-2xl">
           &#60;Projects/&#62;
         </h3>
         <div
@@ -34,12 +34,12 @@ export default function Projects({ projects }: Props): ReactElement {
                 <motion.img
                   initial={{
                     opacity: 0,
-                    y: -300,
+                    y: -210,
                   }}
                   transition={{ duration: 1.2 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  className="w-44 h-38"
+                  className="w-32"
                   src={urlFor(project?.image.asset?._ref).url()}
                   alt="project"
                 />
@@ -61,7 +61,7 @@ export default function Projects({ projects }: Props): ReactElement {
                       }
                     )}
                   </div>
-                  {/* <div className="flex items-center space-x-2 justify-center">
+                  <div className="flex items-center space-x-2 justify-center">
                     {project?.gitLink ? (
                       <a
                         target="_blank"
@@ -71,16 +71,16 @@ export default function Projects({ projects }: Props): ReactElement {
                         <button className="heroButton">Open Source 🔥</button>
                       </a>
                     ) : null}
-                    {project?.liveLink ? (
+                    {project?.linkToBuild ? (
                       <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        href={project?.liveLink}
+                        href={project?.linkToBuild}
                       >
                         <button className="heroButton">Live 📸</button>
                       </a>
                     ) : null}
-                  </div> */}
+                  </div>
                   <p className="text-center md:text-left text-md">
                     {project?.summary}
                   </p>

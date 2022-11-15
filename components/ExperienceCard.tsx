@@ -10,8 +10,8 @@ type Props = {
 export default function ExperienceCard({experience}:Props): ReactElement {
     return (
       <article
-        className="flex flex-col mt-5 rounded-lg items-center space-y-7 flex-shrink-0 
-        w-[400px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-40
+        className="flex flex-col mt-5 rounded-lg items-center md:space-y-7 space-y-0 flex-shrink-0 
+        w-[295px] sm:w-[500px] md:w-[730px] xl:w-[1100px] snap-center bg-[#292929] md:p-10 md:pt-10 hover:opacity-100 opacity-40
         cursor-pointer transition-opacity duration-200"
       >
         <motion.img
@@ -22,7 +22,7 @@ export default function ExperienceCard({experience}:Props): ReactElement {
           transition={{ duration: 1.2 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="w-32 h-32 rounded-full xl:w-[100px] xl:h-[100px] object-cover object-center"
+          className="w-20 h-20 rounded-full xl:w-[100px] xl:h-[100px] object-cover object-center"
           src={urlFor(experience?.companyImage?.asset._ref).url()}
           alt="company logo"
         />
@@ -31,14 +31,15 @@ export default function ExperienceCard({experience}:Props): ReactElement {
           <p className="font-bold text-md mt-1">{experience?.company}</p>
           <div className="flex space-x-2 my-2 justify-center md:justify-start">
             {experience?.technologies?.map((technology, index) => {
-               return <img key={index}
-                 className="h-6 w-6 rounded-full"
-                 src={urlFor(technology.image).url()}
-                 alt={technology.title}
-               />;
+              return (
+                <img
+                  key={index}
+                  className="h-6 w-6 rounded-full"
+                  src={urlFor(technology.image).url()}
+                  alt={technology.title}
+                />
+              );
             })}
-           
-            
           </div>
           <p className="uppercase py-5 text-gray-300">
             {new Date(experience?.dateStarted).toDateString()} -{" "}
@@ -47,8 +48,8 @@ export default function ExperienceCard({experience}:Props): ReactElement {
               : new Date(experience?.dateEnded).toDateString()}
           </p>
           <ul className="list-disc ml-5 text-sm">
-            {experience?.points?.map((point,index) => {
-              return <li key={index}> {point} </li>
+            {experience?.points?.map((point, index) => {
+              return <li key={index}> {point} </li>;
             })}
           </ul>
         </div>

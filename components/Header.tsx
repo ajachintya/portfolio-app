@@ -10,7 +10,7 @@ type Props = {
 
 function Header({ socials }:Props) {
   return (
-    <header className="sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center">
+    <div className="sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center">
       <motion.div
         initial={{
           x: -500,
@@ -28,7 +28,7 @@ function Header({ socials }:Props) {
         className="flex flex-row items-center"
       >
         {/* Social icon */}
-        {socials?.map((social,index) => {
+        {socials?.map((social, index) => {
           return (
             <SocialIcon
               key={index}
@@ -43,6 +43,7 @@ function Header({ socials }:Props) {
           );
         })}
       </motion.div>
+
       <motion.div
         initial={{
           x: 500,
@@ -57,9 +58,10 @@ function Header({ socials }:Props) {
         transition={{
           duration: 1.5,
         }}
-        className="flex flex-row items-center text-gray-300 cursor-pointer">
-        
+        className="flex flex-row items-center text-gray-300 cursor-pointer"
+      >
         <SocialIcon
+          url="#contact"
           style={{ height: 40, width: 40 }}
           className="cursor-pointer"
           network="email"
@@ -72,7 +74,7 @@ function Header({ socials }:Props) {
           </p>
         </Link>
       </motion.div>
-    </header>
+    </div>
   );
 }
 
