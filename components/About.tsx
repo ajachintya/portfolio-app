@@ -8,6 +8,7 @@ type Props = {
   pageInfo: PageInfo;
 };
 
+
 export default function About({ pageInfo }: Props): ReactElement {
   return (
     <motion.div
